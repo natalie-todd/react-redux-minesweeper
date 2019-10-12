@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
+import Square from './Square';
+import { tsConstructorType } from '@babel/types';
+const { useCallback, PureComponent } = React;
+const App = () => {
 
-function App() {
+  const createGrid = useCallback(() => {
+    const grid = Array.from({ length: 10 },(_, i) => 
+    Array.from({ length: 10 },(_, j) => 
+    [i, j].join(','),))
+    return grid.map(row => row.map(xy => <Square key={xy}/>))
+  },
+    [],
+  );
+
   return (
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button> 
+    <div>
+      {createGrid()}
+    </div>
   );
 }
 
