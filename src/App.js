@@ -26,7 +26,7 @@ const App = () => {
         {createGrid()}
       </Grid>
     </div>
-  );
+  )
 }
 
 export default App;
