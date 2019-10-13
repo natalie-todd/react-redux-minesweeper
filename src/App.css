@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -25,4 +28,8 @@
   background-color: #09d3ac;
   display: flex;
   flex-wrap: wrap;
+}
+
+.Square {
+  height: 5vh;
 }

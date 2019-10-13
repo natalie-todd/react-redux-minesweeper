@@ -21,7 +21,7 @@ const App = () => {
   );
 
   return (
-    <div>
+    <div className="App">
       <Grid item xs={3} className="Square-Container">
         {createGrid()}
       </Grid>
